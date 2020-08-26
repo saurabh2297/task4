@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Task4&5</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>I am sticked here</h1>
+        <p><a href="#slider">click here for image slider or scroll down</a><br>&#9196;<br>&#9196;<br>&#9196;<br>&#9196;<br>&#9196;
+            <br>&#9196;<br>&#9196;<br>&#9196;<br>&#9196;<br>&#9196;<br>&#9196;<br></p>
+        <div id= "slider">
+            <img class="mySlides" src="1391_Broken_Flower.jpg" >
+            <img class="mySlides" src="1399_Red_Maple.jpg" >
+            <img class="mySlides" src="2477_Lush_Summer.jpg">
+        </div>
+        <div class="slideb">
+            <button class="b1" onclick="plusDivs(-1)">❮ Prev</button>
+            <button class="b1" onclick="plusDivs(1)">Next ❯</button>
+        </div>
+    
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function currentDiv(n) {
+          showDivs(slideIndex = n);
+        }
+        
+        function showDivs(n) {
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = x.length}
+          for (let i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";    
+        }
+    </script>
+    </body>
+</html>
+
